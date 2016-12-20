@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="luyushi" namespace="/c1" extends="struts-default">
+		<action name="login" class="login.loginaction">
+			<result name="success">/admin_index.jsp</result>
+			<result name="fail">/login/index.jsp</result>
+		</action>
+		<action name="newslistbytag" class="newslist.newslistaction">
+			<result name="success">/newscatalogue.jsp</result>
+			<result name="fail">/news.jsp</result>
+		</action>
+		<action name="newslistbydate" class="newslist.newslistaction1">
+			<result name="success">/newscatalogue.jsp</result>
+			<result name="fail">/news.jsp</result>
+		</action>		
+		<action name="addnews" class="addnews.addnewsaction">
+			<result name="success">/admin_index.jsp</result>
+			<!-- <result name="fail">/portfolio.jsp</result> -->
+		</action>
+		<action name="newsinHKTWMC" class="newslist.newslistaction2">
+			<result name="success">/newscatalogue.jsp</result>
+			<result name="fail">/hk_mc_tw.jsp</result>
+		</action>
+		 
+		<action name="newsdetails" class="newsdetails.newsdetailsaction">
+			<result name="success">/newsdetails.jsp</result>
+			<result name="fail">/newscatalogue.jsp</result>
+		</action>
+		
+		<action name="newslistbyname" class="newslist.searchaction">
+			<result name="success">/newscatalogue.jsp</result>
+			<result name="fail">/news.jsp</result>
+		</action>
+		
+	</package>
+</struts>
